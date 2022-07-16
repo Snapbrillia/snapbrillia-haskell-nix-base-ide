@@ -1,0 +1,1 @@
+# snapbrillia-haskell-nix-base-ide

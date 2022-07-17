@@ -2,10 +2,10 @@ image:
   file: .gitpod.Dockerfile
 tasks:
   - init: |
-      cabal update
-      stack build
-    command: |
-      stack test
+      git clone https://github.com/input-output-hk/haskell.nix &&
+      cd haskell.nix
+    command: cd haskell.nix && nix-shell --extra-experimental-features flakes && direnv allow
+
 vscode:
   extensions:
     - haskell.haskell
